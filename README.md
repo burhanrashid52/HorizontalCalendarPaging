@@ -1,10 +1,10 @@
 # Horizontal Calendar Paging
 
-A Simple horizntal date selector build using android Paging 3 and RecycleView.
+A Simple horizontal date selector build using android Paging 3 and RecycleView.
 
 No need to add any other 3rd party libraries.
 
-**It's not a library**. It's sample app.
+**It's not a library**. It's a sample app.
 
 ## How it looks
 ![](https://i.imgur.com/ubn7OCh.gif)
