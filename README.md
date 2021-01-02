@@ -10,7 +10,7 @@ No need to add any other 3rd party libraries.
 ![](https://i.imgur.com/ubn7OCh.gif)
 
 ## How to contribute?
-* Check out contribution guidelines 👉[CONTRIBUTING.md](https://github.com/burhanrashid52/PhotoEditor/blob/master/CONTRIBUTING.md)
+* Check out contribution guidelines 👉[CONTRIBUTING.md](https://github.com/burhanrashid52/HorizontalCalendarPaging/blob/master/CONTRIBUTING.md)
 
 
 ## Questions?🤔
