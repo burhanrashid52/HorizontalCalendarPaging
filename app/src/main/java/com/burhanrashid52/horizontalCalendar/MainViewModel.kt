@@ -1,10 +1,7 @@
 package com.burhanrashid52.horizontalCalendar
 
 import androidx.lifecycle.*
-import androidx.paging.Pager
-import androidx.paging.PagingConfig
-import androidx.paging.cachedIn
-import androidx.paging.liveData
+import androidx.paging.*
 import java.util.*
 
 /**
@@ -18,11 +15,16 @@ class MainViewModel : ViewModel() {
     val selectedDate: LiveData<String>
         get() = _selectedDate
 
-    private val dateSelectionPager =
+    private val dateSelectionPager: LiveData<PagingData<Date>> =
         Transformations.switchMap(selectedDate) { changedSelectedDate ->
             Pager(PagingConfig(pageSize = 10)) {
                 DateSelectionPageSource(changedSelectedDate)
             }.liveData.cachedIn(viewModelScope)
         }
 
+    val dateDetailsList = dateSelectionPager.map { pagingData ->
+        pagingData.map { mealDate ->
+            mealDate.toDateDetails()
+        }
+    }
 }
