@@ -9,8 +9,6 @@ data class DateDetailsUI(
     val monthName: String,
     val dayOfWeek: String,
     val date: Date,
-    val maxCalories: Int = 0,
-    val inTakeCalories: Int = 0,
 )
 
 fun Date.toDateDetails(): DateDetailsUI {

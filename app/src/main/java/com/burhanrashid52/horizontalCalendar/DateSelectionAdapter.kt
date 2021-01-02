@@ -33,8 +33,6 @@ class DateSelectionAdapter(private val onDateSelection: (DateDetailsUI) -> Unit)
             binding.txtMonthName.text = dateDetailsUI.monthName.substring(0, 3)
             binding.txtYear.text = dateDetailsUI.year.toString()
             binding.txtYear.text = dateDetailsUI.year.toString()
-            binding.pbDay.max = dateDetailsUI.maxCalories
-            binding.pbDay.progress = dateDetailsUI.inTakeCalories
             itemView.setOnClickListener {
                 onDateSelection.invoke(dateDetailsUI)
             }

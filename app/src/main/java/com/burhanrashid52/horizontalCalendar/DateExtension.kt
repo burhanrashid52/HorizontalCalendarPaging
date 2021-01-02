@@ -27,3 +27,11 @@ fun String.toDate(stringFormat: String = "dd-MM-yyyy"): Date? {
         null
     }
 }
+
+
+fun getFormatDate(day: Int, month: Int, year: Int): String {
+    val twoDigit = "%1$02d" // two digits
+    val twoDigitDay = String.format(twoDigit, day)
+    val twoDigitMonth = String.format(twoDigit, month)
+    return "${twoDigitDay}-${twoDigitMonth}-${year}"
+}

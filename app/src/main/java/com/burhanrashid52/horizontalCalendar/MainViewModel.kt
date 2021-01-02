@@ -27,4 +27,17 @@ class MainViewModel : ViewModel() {
             mealDate.toDateDetails()
         }
     }
+
+    private val _resetDateList = MutableLiveData<Long>()
+
+    val resetDateList: LiveData<Long>
+        get() = _resetDateList
+
+    @JvmOverloads
+    fun updateCurrentSelectedDate(date: String, invalidateList: Boolean = false) {
+        if (invalidateList) {
+            _resetDateList.value = System.currentTimeMillis()
+        }
+        _selectedDate.value = date
+    }
 }
