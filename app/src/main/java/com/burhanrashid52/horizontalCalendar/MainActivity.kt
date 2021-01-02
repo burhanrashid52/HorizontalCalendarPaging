@@ -18,8 +18,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        val dateSelectionAdapter = DateSelectionAdapter { dateKey ->
-            // mainViewModel.updateCurrentSelectedDate(dateKey)
+        val dateSelectionAdapter = DateSelectionAdapter { dateDetailsUI ->
+            binding.txtSelectedDate.text = """
+                ${dateDetailsUI.dayOfWeek}
+                ${dateDetailsUI.day} ${dateDetailsUI.monthName}
+                ${dateDetailsUI.year}
+            """.trimIndent()
+            //mainViewModel.updateCurrentSelectedDate(dateKey)
         }
 
         val rvDates = binding.rvDates

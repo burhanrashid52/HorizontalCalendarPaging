@@ -18,4 +18,16 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/row_date_details" />
 
+    <TextView
+        android:id="@+id/txtSelectedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="?textAppearanceHeadline5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvDates"
+        tools:text="@tools:sample/date/ddmmyy" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
